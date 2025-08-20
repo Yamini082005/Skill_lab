@@ -1,0 +1,23 @@
+pipeline {
+      agent any 
+      stages{
+            stage('Checkout'){
+             steps{
+               git branch:'main', url:
+
+             'https://github.com/Yamini082005/Skill_lab.git'
+            }
+}
+       stage('Hello'){
+    steps{
+echo"Hello from Jenkins Pipeline!"
+}
+}
+ 
+stage('Goodbye'){
+     steps{
+ echo"Pipeline finished succesfully"
+}
+}
+}
+}
